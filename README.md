@@ -2,14 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm i
+
 pnpm dev
+```
+
+## Fix TailwindCSS Errors
+
+Always use this before deploying if you have made any changes to any tailwind properties.
+
+```bash
+npx prettier --write .
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
