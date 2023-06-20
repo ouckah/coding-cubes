@@ -91,34 +91,24 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            Sign In with Email
+            Sign Up with Email
           </button>
         </div>
       </form>
-      <div className="flex justify-between">
-        <p className="px-1 text-center text-sm text-muted-foreground">
+      <p className="px-1 text-center text-sm text-muted-foreground">
           <Link
-            href="/forgot-password"
+            href="/login"
             className="hover:text-brand underline underline-offset-4"
           >
-            Forgot Password?
+            Already have an account? Log in.
           </Link>
         </p>
-        <p className="px-1 text-center text-sm text-muted-foreground">
-          <Link
-            href="/register"
-            className="hover:text-brand underline underline-offset-4"
-          >
-            Sign Up
-          </Link>
-        </p>
-      </div>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">SIGN IN WITH</span>
+          <span className="bg-background px-2 text-muted-foreground">SIGN UP WITH</span>
         </div>
       </div>
       <div className="flex justify-center space-x-4">

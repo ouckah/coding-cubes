@@ -22,7 +22,7 @@ type SuggestionCardProps = {
 export function LoginForm() {
   return (
     <div className="flex items-center justify-center p-20">
-      <Card className="w-[500px] h-[40rem] bg-[#202020]">
+      <Card className="w-[500px] h-[35.5rem] bg-[#202020]">
         <CardHeader>
           <Link
             href="/"
@@ -43,7 +43,7 @@ export function LoginForm() {
                 CODING CUBES
               </h1>
               <p className="text-sm text-muted-foreground">
-                Enter your email to sign in to your account
+                Enter your email to sign in to your account.
               </p>
             </div>
             <UserAuthForm />
