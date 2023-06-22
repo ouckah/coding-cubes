@@ -3,19 +3,13 @@ import { NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-import nodemailer from "nodemailer";
+import { Client } from "postmark";
 
 import { env } from "@/env.mjs";
 import { siteConfig } from "@/config/site";
 import { db } from "@/lib/db";
 
-const transport = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: env.GMAIL_USER,
-    pass: env.GMAIL_PASSWORD,
-  },
-});
+const postmarkClient = new Client(env.POSTMARK_API_TOKEN);
 
 export const authOptions: NextAuthOptions = {
   // huh any! I know.
@@ -38,8 +32,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: env.GOOGLE_CLIENT_SECRET,
     }),
     EmailProvider({
-      from: env.GMAIL_FROM, // Make sure to update your .env file
-      sendVerificationRequest: async ({ identifier, url }) => {
+      from: env.SMTP_FROM,
+      sendVerificationRequest: async ({ identifier, url, provider }) => {
         const user = await db.user.findUnique({
           where: {
             email: identifier,
@@ -49,23 +43,32 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
-        const email = {
-          from: env.GMAIL_FROM,
-          to: identifier,
-          subject: user?.emailVerified ? "Sign in link" : "Activation link",
-          text: `Click on this link to ${
-            user?.emailVerified ? "sign in" : "activate your account"
-          }: ${url}`,
-          html: `<p>Click on this link to ${
-            user?.emailVerified ? "sign in" : "activate your account"
-          }: <a href="${url}">${url}</a></p>`,
-        };
+        const templateId = user?.emailVerified
+          ? env.POSTMARK_SIGN_IN_TEMPLATE
+          : env.POSTMARK_ACTIVATION_TEMPLATE;
+        if (!templateId) {
+          throw new Error("Missing template id");
+        }
 
-        // Use the transport instance to send email
-        const info = await transport.sendMail(email);
+        const result = await postmarkClient.sendEmailWithTemplate({
+          TemplateId: parseInt(templateId),
+          To: identifier,
+          From: provider.from as string,
+          TemplateModel: {
+            action_url: url,
+          },
+          Headers: [
+            {
+              // Set this to prevent Gmail from threading emails.
+              // See https://stackoverflow.com/questions/23434110/force-emails-not-to-be-grouped-into-conversations/25435722.
+              Name: "X-Entity-Ref-ID",
+              Value: new Date().getTime() + "",
+            },
+          ],
+        });
 
-        if (!info) {
-          throw new Error("Error sending email");
+        if (result.ErrorCode) {
+          throw new Error(result.Message);
         }
       },
     }),
