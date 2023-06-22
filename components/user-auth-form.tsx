@@ -118,7 +118,9 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           <span className="w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">SIGN IN WITH</span>
+          <span className="bg-background px-2 text-muted-foreground">
+            SIGN IN WITH
+          </span>
         </div>
       </div>
       <div className="flex justify-center space-x-4">
