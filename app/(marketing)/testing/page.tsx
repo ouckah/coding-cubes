@@ -23,7 +23,7 @@ export default function PricingPage() {
               EXPLORE
             </div>
             <div className="left-[465px] top-[0px] absolute text-stone-300 text-[24px] font-bold">
-              LESSONS
+              LESSON
             </div>
           </div>
           <div className="w-[189px] h-[35px] left-[1313px] top-[17px] absolute">
