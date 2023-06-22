@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const SCard = React.forwardRef<
   HTMLDivElement,
@@ -14,8 +14,8 @@ const SCard = React.forwardRef<
     )}
     {...props}
   />
-))
-SCard.displayName = "Card"
+));
+SCard.displayName = "Card";
 
 const SCardHeader = React.forwardRef<
   HTMLDivElement,
@@ -26,8 +26,8 @@ const SCardHeader = React.forwardRef<
     className={cn("flex items-center space-x-4 p-6", className)}
     {...props}
   />
-))
-SCardHeader.displayName = "CardHeader"
+));
+SCardHeader.displayName = "CardHeader";
 
 const SCardTitle = React.forwardRef<
   HTMLParagraphElement,
@@ -41,8 +41,8 @@ const SCardTitle = React.forwardRef<
     )}
     {...props}
   />
-))
-SCardTitle.displayName = "CardTitle"
+));
+SCardTitle.displayName = "CardTitle";
 
 const SCardDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -53,16 +53,16 @@ const SCardDescription = React.forwardRef<
     className={cn("text-[16px] font-medium text-white", className)} // Updated here
     {...props}
   />
-))
-SCardDescription.displayName = "CardDescription"
+));
+SCardDescription.displayName = "CardDescription";
 
 const SCardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-SCardContent.displayName = "CardContent"
+));
+SCardContent.displayName = "CardContent";
 
 const SCardFooter = React.forwardRef<
   HTMLDivElement,
@@ -73,8 +73,8 @@ const SCardFooter = React.forwardRef<
     className={cn(" flex items-center p-6 pt-0", className)}
     {...props}
   />
-))
-SCardFooter.displayName = "CardFooter"
+));
+SCardFooter.displayName = "CardFooter";
 
 export {
   SCard,
@@ -83,4 +83,4 @@ export {
   SCardTitle,
   SCardDescription,
   SCardContent,
-}
+};

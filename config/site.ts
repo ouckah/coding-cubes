@@ -1,4 +1,4 @@
-import { SiteConfig } from "types"
+import { SiteConfig } from "types";
 
 export const siteConfig: SiteConfig = {
   name: "CODING CUBES",
@@ -10,4 +10,4 @@ export const siteConfig: SiteConfig = {
     github: "",
     website: "https://codingcubes.com",
   },
-}
+};

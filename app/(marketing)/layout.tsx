@@ -1,22 +1,22 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { marketingConfig } from "@/config/marketing"
-import { getCurrentUser } from "@/lib/session"
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { UserAccountNav } from "@/components/user-account-nav"
+import { marketingConfig } from "@/config/marketing";
+import { getCurrentUser } from "@/lib/session";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
+import { MainNav } from "@/components/main-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { UserAccountNav } from "@/components/user-account-nav";
 
 interface MarketingLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default async function MarketingLayout({
   children,
 }: MarketingLayoutProps) {
-  const user = await getCurrentUser()
+  const user = await getCurrentUser();
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-[#2c2c2c]">
@@ -68,5 +68,5 @@ export default async function MarketingLayout({
 
       <SiteFooter />
     </div>
-  )
+  );
 }

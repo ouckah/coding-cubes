@@ -1,42 +1,42 @@
 // ChatComponent.js
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ChatComponent() {
   const [messages, setMessages] = React.useState([
     { title: "Assistant", description: "Hi, how can I help you?" },
-  ])
-  const [inputMessage, setInputMessage] = React.useState("")
+  ]);
+  const [inputMessage, setInputMessage] = React.useState("");
 
   const addMessage = () => {
     if (inputMessage.trim()) {
       setMessages([
         ...messages,
         { title: "User", description: inputMessage.trim() },
-      ])
-      setInputMessage("")
+      ]);
+      setInputMessage("");
     }
-  }
+  };
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault()
-      addMessage()
+      e.preventDefault();
+      addMessage();
     }
-  }
+  };
 
   const handleMessageChange = (e) => {
-    setInputMessage(e.target.value)
-  }
+    setInputMessage(e.target.value);
+  };
 
   return (
     <>
@@ -62,5 +62,5 @@ export default function ChatComponent() {
         </Button>
       </div>
     </>
-  )
+  );
 }

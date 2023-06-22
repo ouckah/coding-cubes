@@ -1,17 +1,17 @@
-import * as React from "react"
+import * as React from "react";
 
 import {
   SCard,
   SCardDescription,
   SCardHeader,
   SCardTitle,
-} from "@/components/ui/sCard"
+} from "@/components/ui/sCard";
 
 type SuggestionCardProps = {
-  src: string
-  title: string
-  description: string
-}
+  src: string;
+  title: string;
+  description: string;
+};
 
 export function SuggestionCard({
   src,
@@ -31,5 +31,5 @@ export function SuggestionCard({
         </div>
       </SCardHeader>
     </SCard>
-  )
+  );
 }

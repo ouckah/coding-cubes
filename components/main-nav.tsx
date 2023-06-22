@@ -1,34 +1,34 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { useSelectedLayoutSegment } from "next/navigation"
+import * as React from "react";
+import Link from "next/link";
+import { useSelectedLayoutSegment } from "next/navigation";
 
-import { MainNavItem } from "types"
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
-import { MobileNav } from "@/components/mobile-nav"
+import { MainNavItem } from "types";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
+import { MobileNav } from "@/components/mobile-nav";
 
 interface MainNavProps {
-  items?: MainNavItem[]
-  children?: React.ReactNode
+  items?: MainNavItem[];
+  children?: React.ReactNode;
 }
 
 export function MainNav({ items, children }: MainNavProps) {
-  const segment = useSelectedLayoutSegment()
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
+  const segment = useSelectedLayoutSegment();
+  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   return (
     <div className="flex gap-6 md:gap-10 ">
-      <Link href="/" className="hidden items-center space-x-2 md:flex">
+      <Link href="/" className="flex items-center space-x-2 md:hidden">
         <Icons.logo />
         <span className="hidden text-[18px] font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
       {items?.length ? (
-        <nav className="flex hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-10 md:flex">
           {items?.map((item, index) => (
             <Link
               key={index}
@@ -47,7 +47,7 @@ export function MainNav({ items, children }: MainNavProps) {
         </nav>
       ) : null}
       <button
-        className="flex items-center space-x-2 md:hidden"
+        className="hidden items-center space-x-2 md:flex"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
@@ -57,5 +57,5 @@ export function MainNav({ items, children }: MainNavProps) {
         <MobileNav items={items}>{children}</MobileNav>
       )}
     </div>
-  )
+  );
 }

@@ -1,13 +1,13 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { PricingCard } from "@/components/coding_cubes/pricing_card"
-import { Icons } from "@/components/icons"
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { PricingCard } from "@/components/coding_cubes/pricing_card";
+import { Icons } from "@/components/icons";
 
 export const metadata = {
   title: "Pricing",
-}
+};
 
 export default function PricingPage() {
   return (
@@ -136,5 +136,5 @@ export default function PricingPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

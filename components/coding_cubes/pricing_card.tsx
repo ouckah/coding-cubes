@@ -1,16 +1,16 @@
-import * as React from "react"
+import * as React from "react";
 
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
 type SuggestionCardProps = {
-  title: string
-  description: string
-}
+  title: string;
+  description: string;
+};
 
 export function PricingCard({ title, description }: SuggestionCardProps) {
   return (
@@ -23,5 +23,5 @@ export function PricingCard({ title, description }: SuggestionCardProps) {
         </div>
       </CardHeader>
     </Card>
-  )
+  );
 }

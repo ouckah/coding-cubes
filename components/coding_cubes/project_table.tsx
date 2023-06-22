@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
@@ -7,14 +7,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/table";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Icons } from "@/components/icons"
+} from "@/components/ui/tooltip";
+import { Icons } from "@/components/icons";
 
 export function ProjectTable() {
   return (
@@ -124,5 +124,5 @@ export function ProjectTable() {
         </Table>
       </div>
     </div>
-  )
+  );
 }

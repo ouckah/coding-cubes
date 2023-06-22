@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Carousel from "react-multi-carousel"
+import Carousel from "react-multi-carousel";
 
-import "react-multi-carousel/lib/styles.css"
-import React, { useState } from "react"
+import "react-multi-carousel/lib/styles.css";
+import React, { useState } from "react";
 
-import { SuggestionCard } from "@/components/coding_cubes/suggestion_card"
+import { SuggestionCard } from "@/components/coding_cubes/suggestion_card";
 
 const responsive = {
   desktop: {
@@ -24,13 +24,13 @@ const responsive = {
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
-}
+};
 
 export function RowOfCardsfex() {
-  const [showArrows, setShowArrows] = useState(false)
+  const [showArrows, setShowArrows] = useState(false);
 
-  const handleMouseOver = () => setShowArrows(true)
-  const handleMouseOut = () => setShowArrows(false)
+  const handleMouseOver = () => setShowArrows(true);
+  const handleMouseOut = () => setShowArrows(false);
 
   return (
     <div
@@ -102,5 +102,5 @@ export function RowOfCardsfex() {
         <div className="inline-block"></div>
       </Carousel>
     </div>
-  )
+  );
 }

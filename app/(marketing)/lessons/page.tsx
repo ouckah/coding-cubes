@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { Terminal } from "xterm"
-import { FitAddon } from "xterm-addon-fit"
+import { useEffect, useRef } from "react";
+import { Terminal } from "xterm";
+import { FitAddon } from "xterm-addon-fit";
 
-import "xterm/css/xterm.css"
-import { Editor, useMonaco } from "@monaco-editor/react"
-import ReactMarkdown from "react-markdown"
-import remarkGfm from "remark-gfm"
+import "xterm/css/xterm.css";
+import { Editor, useMonaco } from "@monaco-editor/react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const markdownText = `# PYTHON SYNTAX
 ## Review
@@ -62,36 +62,34 @@ Here are some helpful links to the top questions asked by coders about this exer
 - [What are some cool things that Python has been used for?](#)
 
 Still have questions? View this exercise's thread in the Codecademy Forums.
-`
+`;
 
 export default function Home() {
-  const terminalRef = useRef<HTMLDivElement>(null)
-  const terminal = useRef<Terminal>()
-  const monaco = useMonaco()
+  const terminalRef = useRef<HTMLDivElement>(null);
+  const terminal = useRef<Terminal>();
+  const monaco = useMonaco();
 
   useEffect(() => {
-    terminal.current = new Terminal()
-    const fitAddon = new FitAddon()
-    terminal.current.loadAddon(fitAddon)
+    terminal.current = new Terminal();
+    const fitAddon = new FitAddon();
+    terminal.current.loadAddon(fitAddon);
 
     if (terminalRef.current) {
-      terminal.current.open(terminalRef.current)
-      fitAddon.fit()
+      terminal.current.open(terminalRef.current);
+      fitAddon.fit();
     }
 
     return () => {
-      terminal.current?.dispose()
-    }
-  }, [])
+      terminal.current?.dispose();
+    };
+  }, []);
 
   return (
     <div className="flex h-[84vh]">
       <div className="w-1/3 overflow-auto bg-white p-4">
-        <ReactMarkdown
-          className="prose"
-          remarkPlugins={[remarkGfm]}
-          children={markdownText}
-        />
+        <ReactMarkdown className="prose" remarkPlugins={[remarkGfm]}>
+          {markdownText}
+        </ReactMarkdown>
       </div>
       <div className="h-[84vh] w-1/3">
         {monaco && (
@@ -105,5 +103,5 @@ export default function Home() {
       </div>
       <div ref={terminalRef} className="h-[85vh] w-1/3"></div>
     </div>
-  )
+  );
 }

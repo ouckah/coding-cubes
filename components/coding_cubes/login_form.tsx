@@ -1,23 +1,23 @@
-import * as React from "react"
-import { Metadata } from "next"
-import Link from "next/link"
+import * as React from "react";
+import { Metadata } from "next";
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Icons } from "@/components/icons"
-import { UserAuthForm } from "@/components/user-auth-form"
+} from "@/components/ui/card";
+import { Icons } from "@/components/icons";
+import { UserAuthForm } from "@/components/user-auth-form";
 
 type SuggestionCardProps = {
-  src: string
-  title: string
-  description: string
-}
+  src: string;
+  title: string;
+  description: string;
+};
 
 export function LoginForm() {
   return (
@@ -51,5 +51,5 @@ export function LoginForm() {
         </CardHeader>
       </Card>
     </div>
-  )
+  );
 }

@@ -32,9 +32,9 @@ import {
   X,
   XCircle,
   type Icon as LucideIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-export type Icon = LucideIcon
+export type Icon = LucideIcon;
 
 export const Icons = {
   chrome: Chrome,
@@ -83,4 +83,4 @@ export const Icons = {
   ),
   twitter: Twitter,
   check: Check,
-}
+};

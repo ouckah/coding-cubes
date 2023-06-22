@@ -1,20 +1,20 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Icons } from "@/components/icons"
-import { UserAuthForm } from "@/components/user-reg-auth-form"
+} from "@/components/ui/card";
+import { Icons } from "@/components/icons";
+import { UserAuthForm } from "@/components/user-reg-auth-form";
 
 export const metadata = {
   title: "Create an account",
   description: "Create an account to get started.",
-}
+};
 
 export default function RegisterPage() {
   return (
@@ -68,5 +68,5 @@ export default function RegisterPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
