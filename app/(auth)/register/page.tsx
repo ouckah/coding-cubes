@@ -20,7 +20,7 @@ export default function RegisterPage() {
   return (
     <div className="h-screen w-screen bg-[#2c2c2c]">
       <div className="flex items-center justify-center p-20">
-        <Card className="w-[500px] h-[40rem] bg-[#202020]">
+        <Card className="h-[40rem] w-[500px] bg-[#202020]">
           <CardHeader>
             <Link
               href="/"

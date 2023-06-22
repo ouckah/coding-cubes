@@ -12,62 +12,62 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <>
-      <div className="w-[1920px] h-[1844px] relative bg-zinc-800 shadow">
-        <div className="w-[1920px] h-[69px] left-[0px] top-[0px] absolute">
-          <div className="w-[1920px] h-[69px] left-[0px] top-[0px] absolute bg-neutral-800" />
-          <div className="w-[577px] h-[29px] left-[186px] top-[20px] absolute">
-            <div className="left-[223px] top-[0px] absolute text-stone-300 text-[24px] font-bold">
+      <div className="relative h-[1844px] w-[1920px] bg-zinc-800 shadow">
+        <div className="absolute left-[0px] top-[0px] h-[69px] w-[1920px]">
+          <div className="absolute left-[0px] top-[0px] h-[69px] w-[1920px] bg-neutral-800" />
+          <div className="absolute left-[186px] top-[20px] h-[29px] w-[577px]">
+            <div className="absolute left-[223px] top-[0px] text-[24px] font-bold text-stone-300">
               PROJECTS
             </div>
-            <div className="left-[0px] top-[0px] absolute text-stone-300 text-[24px] font-bold">
+            <div className="absolute left-[0px] top-[0px] text-[24px] font-bold text-stone-300">
               EXPLORE
             </div>
-            <div className="left-[465px] top-[0px] absolute text-stone-300 text-[24px] font-bold">
+            <div className="absolute left-[465px] top-[0px] text-[24px] font-bold text-stone-300">
               LESSON
             </div>
           </div>
-          <div className="w-[189px] h-[35px] left-[1313px] top-[17px] absolute">
-            <div className="w-[189px] h-[35px] left-[0px] top-[0px] absolute bg-yellow-400 rounded-2xl" />
-            <div className="left-[64px] top-[7px] absolute text-amber-100 text-[20px] font-bold">
+          <div className="absolute left-[1313px] top-[17px] h-[35px] w-[189px]">
+            <div className="absolute left-[0px] top-[0px] h-[35px] w-[189px] rounded-2xl bg-yellow-400" />
+            <div className="absolute left-[64px] top-[7px] text-[20px] font-bold text-amber-100">
               PREMIUM
             </div>
           </div>
-          <div className="w-[255px] h-[29px] left-[1584px] top-[20px] absolute">
-            <div className="left-[0px] top-[0px] absolute text-stone-300 text-[24px] font-bold">
+          <div className="absolute left-[1584px] top-[20px] h-[29px] w-[255px]">
+            <div className="absolute left-[0px] top-[0px] text-[24px] font-bold text-stone-300">
               SIGN UP
             </div>
-            <div className="left-[180px] top-[0px] absolute text-amber-300 text-[24px] font-bold">
+            <div className="absolute left-[180px] top-[0px] text-[24px] font-bold text-amber-300">
               LOGIN
             </div>
           </div>
         </div>
-        <div className="w-6 h-6 left-[89px] top-[20px] absolute" />
-        <div className="w-[1763px] h-[1369px] left-[76px] top-[429px] absolute">
-          <div className="w-[1763px] h-[99px] left-[0px] top-[0px] absolute bg-neutral-800" />
-          <div className="w-[25px] h-[1271px] left-[1738px] top-[98px] absolute bg-neutral-800" />
-          <div className="w-[25px] h-[1271px] left-[0px] top-[98px] absolute bg-neutral-800" />
-          <div className="w-[25px] h-[1738px] left-[1763px] top-[1344px] absolute origin-top-left rotate-90 bg-neutral-800" />
+        <div className="absolute left-[89px] top-[20px] h-6 w-6" />
+        <div className="absolute left-[76px] top-[429px] h-[1369px] w-[1763px]">
+          <div className="absolute left-[0px] top-[0px] h-[99px] w-[1763px] bg-neutral-800" />
+          <div className="absolute left-[1738px] top-[98px] h-[1271px] w-[25px] bg-neutral-800" />
+          <div className="absolute left-[0px] top-[98px] h-[1271px] w-[25px] bg-neutral-800" />
+          <div className="absolute left-[1763px] top-[1344px] h-[1738px] w-[25px] origin-top-left rotate-90 bg-neutral-800" />
         </div>
-        <div className="w-[25px] h-[86px] left-[1814px] top-[574px] absolute bg-neutral-900" />
-        <div className="w-[427px] h-[99px] left-[76px] top-[429px] absolute bg-zinc-900" />
-        <div className="w-[1064px] h-[39px] left-[181px] top-[459px] absolute">
-          <div className="left-[0px] top-[0px] absolute text-white text-[31.8885440826416px] font-bold">
+        <div className="absolute left-[1814px] top-[574px] h-[86px] w-[25px] bg-neutral-900" />
+        <div className="absolute left-[76px] top-[429px] h-[99px] w-[427px] bg-zinc-900" />
+        <div className="absolute left-[181px] top-[459px] h-[39px] w-[1064px]">
+          <div className="absolute left-[0px] top-[0px] text-[31.8885440826416px] font-bold text-white">
             DESCRIPTION
           </div>
-          <div className="left-[424px] top-[0px] absolute text-white text-[31.8885440826416px] font-bold">
+          <div className="absolute left-[424px] top-[0px] text-[31.8885440826416px] font-bold text-white">
             SUBMISSIONS
           </div>
-          <div className="left-[864px] top-[0px] absolute text-white text-[31.8885440826416px] font-bold">
+          <div className="absolute left-[864px] top-[0px] text-[31.8885440826416px] font-bold text-white">
             DISCUSSION
           </div>
         </div>
-        <div className="w-[1492px] h-[690px] left-[212px] top-[1130px] absolute">
-          <div className="w-[1492px] left-[0px] top-[0px] absolute">
-            <span className="text-white text-[36px] font-bold leading-10">
+        <div className="absolute left-[212px] top-[1130px] h-[690px] w-[1492px]">
+          <div className="absolute left-[0px] top-[0px] w-[1492px]">
+            <span className="text-[36px] font-bold leading-10 text-white">
               User Interface
               <br />
             </span>
-            <span className="text-white text-[36px] font-medium leading-10">
+            <span className="text-[36px] font-medium leading-10 text-white">
               Design and implement a visually appealing and intuitive graphical
               user interface (GUI) for the Tic Tac Toe game.
               <br />
@@ -81,24 +81,24 @@ export default function PricingPage() {
               draw, or in progress).
             </span>
           </div>
-          <div className="w-[1492px] left-[0px] top-[516px] absolute">
-            <span className="text-white text-[36px] font-bold leading-10">
+          <div className="absolute left-[0px] top-[516px] w-[1492px]">
+            <span className="text-[36px] font-bold leading-10 text-white">
               Game Logic
               <br />
             </span>
-            <span className="text-white text-[36px] font-medium leading-10">
+            <span className="text-[36px] font-medium leading-10 text-white">
               Implement the core logic of the Tic Tac Toe game using a suitable
               programming
               <br />
             </span>
           </div>
         </div>
-        <div className="left-[172px] top-[1046px] absolute text-white text-[36px] font-extrabold leading-10">
+        <div className="absolute left-[172px] top-[1046px] text-[36px] font-extrabold leading-10 text-white">
           INSTRUCTIONS
         </div>
-        <div className="w-[1635px] h-[342px] left-[140px] top-[646px] absolute">
-          <div className="w-[1635px] h-[342px] left-[0px] top-[0px] absolute bg-neutral-700 rounded-[25px]" />
-          <div className="left-[75px] top-[26px] absolute text-white text-[28px] font-medium leading-10">
+        <div className="absolute left-[140px] top-[646px] h-[342px] w-[1635px]">
+          <div className="absolute left-[0px] top-[0px] h-[342px] w-[1635px] rounded-[25px] bg-neutral-700" />
+          <div className="absolute left-[75px] top-[26px] text-[28px] font-medium leading-10 text-white">
             User Interface Design and Development
             <br />
             Game Logic Implementation
@@ -109,30 +109,30 @@ export default function PricingPage() {
             <br />
             Score keeping and Statistics (optional)
           </div>
-          <div className="w-[282px] h-[282px] left-[1292px] top-[31px] absolute bg-zinc-300 bg-opacity-10 rounded-[25px] shadow" />
-          <div className="w-[241px] h-[241px] left-[1313px] top-[52px] absolute" />
+          <div className="absolute left-[1292px] top-[31px] h-[282px] w-[282px] rounded-[25px] bg-zinc-300 bg-opacity-10 shadow" />
+          <div className="absolute left-[1313px] top-[52px] h-[241px] w-[241px]" />
         </div>
-        <div className="left-[172px] top-[567px] absolute text-white text-[36px] font-extrabold leading-10">
+        <div className="absolute left-[172px] top-[567px] text-[36px] font-extrabold leading-10 text-white">
           SKILLS REQUIRED
         </div>
-        <div className="w-[1767px] h-[265px] left-[76px] top-[106px] absolute">
-          <div className="w-[1767px] h-[265px] left-[0px] top-[0px] absolute bg-neutral-800 rounded-[25px] shadow" />
-          <div className="w-[206px] h-[81.32px] left-[53px] top-[149px] absolute">
-            <div className="w-[206px] h-[81.32px] left-[0px] top-[0px] absolute bg-green-200 bg-opacity-60 rounded-[25px]" />
-            <div className="left-[43.37px] top-[13.55px] absolute text-green-950 text-[43.3684196472168px] font-semibold">
+        <div className="absolute left-[76px] top-[106px] h-[265px] w-[1767px]">
+          <div className="absolute left-[0px] top-[0px] h-[265px] w-[1767px] rounded-[25px] bg-neutral-800 shadow" />
+          <div className="absolute left-[53px] top-[149px] h-[81.32px] w-[206px]">
+            <div className="absolute left-[0px] top-[0px] h-[81.32px] w-[206px] rounded-[25px] bg-green-200 bg-opacity-60" />
+            <div className="absolute left-[43.37px] top-[13.55px] text-[43.3684196472168px] font-semibold text-green-950">
               EASY
             </div>
           </div>
-          <div className="left-[23px] top-[36px] absolute text-white text-[72px] font-bold">
+          <div className="absolute left-[23px] top-[36px] text-[72px] font-bold text-white">
             TIC TAC TOE
           </div>
-          <div className="w-[121.82px] h-12 left-[1596px] top-[181px] absolute">
-            <div className="left-[55.82px] top-[4.62px] absolute text-zinc-400 text-[31.8885440826416px] font-bold">
+          <div className="absolute left-[1596px] top-[181px] h-12 w-[121.82px]">
+            <div className="absolute left-[55.82px] top-[4.62px] text-[31.8885440826416px] font-bold text-zinc-400">
               1.2K
             </div>
-            <div className="w-12 h-12 left-[0px] top-[0px] absolute" />
+            <div className="absolute left-[0px] top-[0px] h-12 w-12" />
           </div>
-          <div className="w-[60px] h-[60px] left-[1658px] top-[50px] absolute" />
+          <div className="absolute left-[1658px] top-[50px] h-[60px] w-[60px]" />
         </div>
       </div>
     </>

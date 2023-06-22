@@ -13,15 +13,15 @@ export default function PricingPage() {
   return (
     <>
       <div className="flex flex-col items-center justify-center text-center">
-        <Icons.logo className="w-[150px] h-[150px]" />
-        <h1 className="text-[66px] mt-[-15px] text-[#AD924F] font-medium">
+        <Icons.logo className="h-[150px] w-[150px]" />
+        <h1 className="mt-[-15px] text-[66px] font-medium text-[#AD924F]">
           PREMIUM
         </h1>
-        <h2 className="text-[32px] text-[#747474] font-light">
+        <h2 className="text-[32px] font-light text-[#747474]">
           Upgrade your project creation experience.
         </h2>
       </div>
-      <div className="flex mt justify-center space-x-20 mt-[35px]">
+      <div className="mt mt-[35px] flex justify-center space-x-20">
         <PricingCard title="test" description="test" />
         <PricingCard title="test" description="test" />
         <PricingCard title="test" description="test" />

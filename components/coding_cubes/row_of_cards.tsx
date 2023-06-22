@@ -38,7 +38,7 @@ export function RowOfCards() {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <p className="font-bold text-[24px] mt-[-35px] pb-5">💡 SUGGESTED:</p>
+      <p className="mt-[-35px] pb-5 text-[24px] font-bold">💡 SUGGESTED:</p>
       <Carousel
         swipeable={true}
         draggable={true}

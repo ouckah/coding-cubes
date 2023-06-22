@@ -9,7 +9,7 @@ const SCard = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-white shadow-sm hover:bg-white/30 cursor-pointer",
+      "text-card-white cursor-pointer rounded-lg border bg-card shadow-sm hover:bg-white/30",
       className
     )}
     {...props}

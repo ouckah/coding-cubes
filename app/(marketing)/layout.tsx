@@ -19,19 +19,19 @@ export default async function MarketingLayout({
   const user = await getCurrentUser()
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#2c2c2c] w-full">
-      <header className="p-3 z-40 bg-background flex justify-between">
+    <div className="flex min-h-screen w-full flex-col bg-[#2c2c2c]">
+      <header className="z-40 flex justify-between bg-background p-3">
         <div className="ml-[15rem] pt-[2px]">
           <MainNav items={marketingConfig.mainNav} />
         </div>
-        <div className="flex gap-10 mr-[15rem]">
+        <div className="mr-[15rem] flex gap-10">
           <Link
             href="/pricing"
             className={cn(
-              "flex items-center bg-[#ffc700] py-1 px-3 text-[24px] text-[#212121] rounded-xl font-bold transition-colors hover:text-white/80"
+              "flex items-center rounded-xl bg-[#ffc700] px-3 py-1 text-[24px] font-bold text-[#212121] transition-colors hover:text-white/80"
             )}
           >
-            <Icons.star className="font-bold mr-[5px]" /> PREMIUM
+            <Icons.star className="mr-[5px] font-bold" /> PREMIUM
           </Link>
           {user && (
             <UserAccountNav
@@ -55,7 +55,7 @@ export default async function MarketingLayout({
               <Link
                 href="/login"
                 className={cn(
-                  "flex items-center text-[24px] text-[#FFD645] font-bold transition-colors hover:text-white/80"
+                  "flex items-center text-[24px] font-bold text-[#FFD645] transition-colors hover:text-white/80"
                 )}
               >
                 LOGIN

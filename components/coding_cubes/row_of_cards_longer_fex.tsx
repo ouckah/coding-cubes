@@ -38,7 +38,7 @@ export function RowOfCardsfex() {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
-      <p className="font-bold text-[24px] pb-5 mt-[-30px]">✨ POPULAR:</p>
+      <p className="mt-[-30px] pb-5 text-[24px] font-bold">✨ POPULAR:</p>
       <Carousel
         swipeable={true}
         draggable={true}

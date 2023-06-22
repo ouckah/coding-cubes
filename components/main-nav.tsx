@@ -23,12 +23,12 @@ export function MainNav({ items, children }: MainNavProps) {
     <div className="flex gap-6 md:gap-10 ">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
         <Icons.logo />
-        <span className="hidden font-bold sm:inline-block text-[18px]">
+        <span className="hidden text-[18px] font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
       {items?.length ? (
-        <nav className="flex items-center hidden gap-10 md:flex">
+        <nav className="flex hidden items-center gap-10 md:flex">
           {items?.map((item, index) => (
             <Link
               key={index}

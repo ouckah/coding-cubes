@@ -14,9 +14,9 @@ type SuggestionCardProps = {
 
 export function PricingCard({ title, description }: SuggestionCardProps) {
   return (
-    <Card className="w-[500px] h-[550px] bg-[#202020]">
+    <Card className="h-[550px] w-[500px] bg-[#202020]">
       <CardHeader>
-        <div className="flex flex-col justify-center max-w-[calc(100%-200px)]">
+        <div className="flex max-w-[calc(100%-200px)] flex-col justify-center">
           <CardTitle>{title}</CardTitle>
           <br />
           <CardDescription>{description}</CardDescription>

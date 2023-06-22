@@ -19,12 +19,12 @@ export function SuggestionCard({
   description,
 }: SuggestionCardProps) {
   return (
-    <SCard className="w-[500px] h-[250px] bg-[#202020]">
+    <SCard className="h-[250px] w-[500px] bg-[#202020]">
       <SCardHeader>
         <div style={{ width: "200px" }}>
           <img className="w-full rounded-xl" src={src} />
         </div>
-        <div className="flex flex-col justify-center max-w-[calc(100%-200px)]">
+        <div className="flex max-w-[calc(100%-200px)] flex-col justify-center">
           <SCardTitle>{title}</SCardTitle>
           <br />
           <SCardDescription>{description}</SCardDescription>

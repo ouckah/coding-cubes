@@ -22,7 +22,7 @@ type SuggestionCardProps = {
 export function LoginForm() {
   return (
     <div className="flex items-center justify-center p-20">
-      <Card className="w-[500px] h-[35.5rem] bg-[#202020]">
+      <Card className="h-[35.5rem] w-[500px] bg-[#202020]">
         <CardHeader>
           <Link
             href="/"

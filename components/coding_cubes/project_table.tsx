@@ -20,7 +20,7 @@ export function ProjectTable() {
   return (
     <div className="flex items-center justify-center">
       <div className="w-[85%] pt-10">
-        <p className="font-bold text-[24px] pb-5">💻 PROJECTS:</p>
+        <p className="pb-5 text-[24px] font-bold">💻 PROJECTS:</p>
         <Table>
           <TableHeader>
             <TableRow rowIndex={0}>
@@ -48,7 +48,7 @@ export function ProjectTable() {
               </TableCell>
               <TableCell>1. Two Sum</TableCell>
               <TableCell className="text-right">
-                <div className="flex items-center justify-end mr-[20px]">
+                <div className="mr-[20px] flex items-center justify-end">
                   <Icons.page size={35} color="white" />
                 </div>
               </TableCell>
@@ -73,7 +73,7 @@ export function ProjectTable() {
               </TableCell>
               <TableCell>2. Add Two Numbers</TableCell>
               <TableCell className="text-right">
-                <div className="flex items-center justify-end mr-[20px]">
+                <div className="mr-[20px] flex items-center justify-end">
                   <Icons.page size={35} color="white" />
                 </div>
               </TableCell>
@@ -100,7 +100,7 @@ export function ProjectTable() {
                 3. Longest Substring Without Repeating Characters
               </TableCell>
               <TableCell className="text-right">
-                <div className="flex items-center justify-end mr-[20px]">
+                <div className="mr-[20px] flex items-center justify-end">
                   <Icons.page size={35} color="white" />
                 </div>
               </TableCell>
@@ -112,7 +112,7 @@ export function ProjectTable() {
               <TableCell className="font-medium"></TableCell>
               <TableCell>4. Median of Two Sorted Arrays</TableCell>
               <TableCell className="text-right">
-                <div className="flex items-center justify-end mr-[20px]">
+                <div className="mr-[20px] flex items-center justify-end">
                   <Icons.page size={35} color="white" />
                 </div>
               </TableCell>

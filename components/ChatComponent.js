@@ -50,14 +50,14 @@ export default function ChatComponent() {
           </Card>
         ))}
       </ScrollArea>
-      <div className="flex items-center justify-center h-full">
+      <div className="flex h-full items-center justify-center">
         <Textarea
           className="w-[90%] rounded-md border p-4"
           value={inputMessage}
           onChange={handleMessageChange}
           onKeyPress={handleKeyPress}
         />
-        <Button className="rounded-md border p-4 ml-5" onClick={addMessage}>
+        <Button className="ml-5 rounded-md border p-4" onClick={addMessage}>
           Send
         </Button>
       </div>

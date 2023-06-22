@@ -86,14 +86,14 @@ export default function Home() {
 
   return (
     <div className="flex h-[84vh]">
-      <div className="w-1/3 p-4 overflow-auto bg-white">
+      <div className="w-1/3 overflow-auto bg-white p-4">
         <ReactMarkdown
           className="prose"
           remarkPlugins={[remarkGfm]}
           children={markdownText}
         />
       </div>
-      <div className="w-1/3 h-[84vh]">
+      <div className="h-[84vh] w-1/3">
         {monaco && (
           <Editor
             width="100%"
@@ -103,7 +103,7 @@ export default function Home() {
           />
         )}
       </div>
-      <div ref={terminalRef} className="w-1/3 h-[85vh]"></div>
+      <div ref={terminalRef} className="h-[85vh] w-1/3"></div>
     </div>
   )
 }

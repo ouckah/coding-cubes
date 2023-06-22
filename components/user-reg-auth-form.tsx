@@ -68,7 +68,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               Email
             </Label>
             <Input
-              className="bg-[#d9d9d9] h-[65px]"
+              className="h-[65px] bg-[#d9d9d9]"
               id="email"
               placeholder="name@example.com"
               type="email"
