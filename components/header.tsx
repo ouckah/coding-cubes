@@ -15,9 +15,7 @@ export function DashboardHeader({
         <h1 className="font-heading text-3xl text-white md:text-4xl">
           {heading}
         </h1>
-        {text && (
-          <p className="text-lg text-muted-foreground text-white">{text}</p>
-        )}
+        {text && <p className="text-lg text-white">{text}</p>}
       </div>
       {children}
     </div>
