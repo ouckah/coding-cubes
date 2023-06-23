@@ -55,7 +55,7 @@ export function BillingForm({
 
   return (
     <form className={cn(className)} onSubmit={onSubmit} {...props}>
-      <Card>
+      <Card className="bg-[#212121]">
         <CardHeader>
           <CardTitle>Subscription Plan</CardTitle>
           <CardDescription>

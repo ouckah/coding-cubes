@@ -79,10 +79,10 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
       onSubmit={handleSubmit(onSubmit)}
       {...props}
     >
-      <Card>
+      <Card className="bg-[#212121]">
         <CardHeader>
           <CardTitle>Your Name</CardTitle>
-          <CardDescription>
+          <CardDescription className="text-white">
             Please enter your full name or a display name you are comfortable
             with.
           </CardDescription>

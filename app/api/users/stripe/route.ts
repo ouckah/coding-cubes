@@ -7,7 +7,7 @@ import { stripe } from "@/lib/stripe";
 import { getUserSubscriptionPlan } from "@/lib/subscription";
 import { absoluteUrl } from "@/lib/utils";
 
-const billingUrl = absoluteUrl("/dashboard/billing");
+const billingUrl = absoluteUrl("/billing");
 
 export async function GET(req: Request) {
   try {

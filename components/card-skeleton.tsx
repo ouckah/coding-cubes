@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export function CardSkeleton() {
   return (
-    <Card>
+    <Card className="bg-[#212121]">
       <CardHeader className="gap-2">
         <Skeleton className="h-5 w-1/5" />
         <Skeleton className="h-4 w-4/5" />

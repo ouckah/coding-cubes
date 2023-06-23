@@ -4,7 +4,7 @@ export const marketingConfig: MarketingConfig = {
   mainNav: [
     {
       title: "EXPLORE",
-      href: "/#features",
+      href: "/",
     },
     {
       title: "PROJECTS",

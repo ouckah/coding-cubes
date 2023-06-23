@@ -41,7 +41,7 @@ export default async function BillingPage() {
   }
 
   return (
-    <DashboardShell>
+    <DashboardShell className="">
       <DashboardHeader
         heading="Billing"
         text="Manage billing and your subscription plan."
