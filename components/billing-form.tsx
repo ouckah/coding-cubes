@@ -73,7 +73,9 @@ export function BillingForm({
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            {subscriptionPlan.isPro ? "Manage Subscription" : "Upgrade to PRO"}
+            {subscriptionPlan.isPro
+              ? "Manage Subscription"
+              : "Upgrade to PREMIUM"}
           </button>
           {subscriptionPlan.isPro ? (
             <p className="rounded-full text-xs font-medium">
