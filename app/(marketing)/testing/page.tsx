@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { PricingCard } from "@/components/coding_cubes/pricing_card";
+import { PricingCard } from "@/components/coding_cubes/pro_monthly_card";
 import { Icons } from "@/components/icons";
 
 export const metadata = {

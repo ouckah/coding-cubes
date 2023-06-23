@@ -56,6 +56,7 @@ export const authOptions: NextAuthOptions = {
           From: provider.from as string,
           TemplateModel: {
             action_url: url,
+            product_name: siteConfig.name,
           },
           Headers: [
             {

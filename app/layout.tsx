@@ -40,7 +40,7 @@ export const metadata = {
   authors: [
     {
       name: "Coding Cubes",
-      url: "codingcubes.com",
+      url: "https://codingcubes.org/",
     },
   ],
   creator: "John Sandoval",
