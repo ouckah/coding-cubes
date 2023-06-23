@@ -14,4 +14,4 @@ const nextConfig = {
   },
 };
 
-export default withContentlayer()(nextConfig);
+export default withContentlayer(nextConfig);
