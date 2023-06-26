@@ -25,10 +25,6 @@ import {
 import { Ultra } from "next/font/google";
 import { Button } from "@/components/ui/button";
 
-export const metadata = {
-  title: "Project",
-};
-
 export default function ProjectPage() {
   return (
     <div className="mt-[25px] flex flex-col items-center justify-center">
