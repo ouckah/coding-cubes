@@ -31,12 +31,14 @@ import {
   User,
   X,
   XCircle,
+  TrendingUp,
   type Icon as LucideIcon,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
 
 export const Icons = {
+  trendingUp: TrendingUp,
   chrome: Chrome,
   xcircle: XCircle,
   loader: Loader,

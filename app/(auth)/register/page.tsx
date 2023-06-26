@@ -34,7 +34,7 @@ export default function RegisterPage() {
                 Back
               </>
             </Link>
-            <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+            <div className="mx-auto flex w-full flex-col justify-center space-y-8 sm:w-[350px]">
               <div className="flex flex-col space-y-2 text-center">
                 <Icons.logo className="mx-auto h-[150px] w-[150px]" />
                 <h1 className="text-2xl font-semibold tracking-tight">

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { dashboardConfig } from "@/config/dashboard";
+import { dashboardConfig } from "@/config/admin_dash";
 import { getCurrentUser } from "@/lib/session";
 import { MainNav } from "@/components/main-nav";
 import { DashboardNav } from "@/components/nav";

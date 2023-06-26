@@ -11,6 +11,8 @@ const badgeVariants = cva(
         default:
           "bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
         easy: "mr-[0px] bg-green-500 hover:bg-[white]/80 border-transparent text-primary-foreground",
+        easy_large:
+          "mr-[0px] w-[136px] text-[23px] h-[61px] flex items-center justify-center bg-green-500 hover:bg-[white]/80 border-transparent text-primary-foreground",
         medium:
           "mr-[0px] bg-yellow-500 hover:bg-[white]/80 border-transparent text-primary-foreground",
         hard: "mr-[0px] bg-red-500 hover:bg-[white]/80 border-transparent text-primary-foreground",

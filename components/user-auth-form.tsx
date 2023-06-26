@@ -15,7 +15,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
-
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 type FormData = z.infer<typeof userAuthSchema>;
@@ -95,21 +100,13 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           </button>
         </div>
       </form>
-      <div className="flex justify-between">
-        <p className="px-1 text-center text-sm text-muted-foreground">
-          <Link
-            href="/forgot-password"
-            className="hover:text-brand underline underline-offset-4"
-          >
-            Forgot Password?
-          </Link>
-        </p>
+      <div className="flex justify-center">
         <p className="px-1 text-center text-sm text-muted-foreground">
           <Link
             href="/register"
             className="hover:text-brand underline underline-offset-4"
           >
-            Sign Up
+            Sign Up.
           </Link>
         </p>
       </div>
@@ -136,7 +133,18 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           {isGitHubLoading ? (
             <Icons.spinner className="mr-2 h-[61px] w-[61px] animate-spin" />
           ) : (
-            <Icons.gitHub className="mr-2 h-[61px] w-[61px]" />
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="ml-[5px]">
+                    <Icons.gitHub className="mr-2 h-[61px] w-[61px]" />
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Sign In with GitHub.</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           )}{" "}
         </button>
         <button
@@ -151,7 +159,18 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           {isChromeLoading ? (
             <Icons.spinner className="mr-2 h-[61px] w-[61px] animate-spin" />
           ) : (
-            <Icons.chrome className="mr-2 h-[61px] w-[61px]" /> // Assuming you've added a Chrome icon to your Icons component
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="ml-[5px]">
+                    <Icons.chrome className="mr-2 h-[61px] w-[61px]" />
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Sign Up with Google.</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           )}{" "}
         </button>
       </div>

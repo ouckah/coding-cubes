@@ -27,7 +27,7 @@ export function PostCreateButton({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title: "Untitled Post",
+        title: "Untitled Project",
       }),
     });
 
@@ -37,7 +37,7 @@ export function PostCreateButton({
       if (response.status === 402) {
         return toast({
           title: "",
-          description: "Please upgrade to the PRO plan.",
+          description: "Please upgrade to the PREMIUM plan.",
           variant: "destructive",
         });
       }
@@ -75,7 +75,7 @@ export function PostCreateButton({
       ) : (
         <Icons.add className="mr-2 h-4 w-4" />
       )}
-      New post
+      New project
     </button>
   );
 }

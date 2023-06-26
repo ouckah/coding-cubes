@@ -50,7 +50,7 @@ export function Editor({ post }: EditorProps) {
         onReady() {
           ref.current = editor;
         },
-        placeholder: "Type here to write your post...",
+        placeholder: "Type here to write your project...",
         inlineToolbar: true,
         data: body.content,
         tools: {
@@ -112,7 +112,7 @@ export function Editor({ post }: EditorProps) {
     router.refresh();
 
     return toast({
-      description: "Your post has been saved.",
+      description: "Your project has been saved.",
     });
   }
 
@@ -122,11 +122,11 @@ export function Editor({ post }: EditorProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="grid w-full gap-10">
+      <div className=" grid w-full gap-10">
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center space-x-10">
             <Link
-              href="/dashboard"
+              href="/admin"
               className={cn(buttonVariants({ variant: "ghost" }))}
             >
               <>
@@ -134,7 +134,7 @@ export function Editor({ post }: EditorProps) {
                 Back
               </>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white">
               {post.published ? "Published" : "Draft"}
             </p>
           </div>
@@ -154,10 +154,10 @@ export function Editor({ post }: EditorProps) {
             className="w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none"
             {...register("title")}
           />
-          <div id="editor" className="min-h-[500px]" />
+          <div id="editor" className="bg-min-h-[500px]" />
           <p className="text-sm text-gray-500">
             Use{" "}
-            <kbd className="rounded-md border bg-muted px-1 text-xs uppercase">
+            <kbd className="rounded-md border bg-white px-1 text-xs uppercase">
               Tab
             </kbd>{" "}
             to open the command menu.

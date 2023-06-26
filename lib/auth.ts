@@ -8,8 +8,7 @@ import { Client } from "postmark";
 import { env } from "@/env.mjs";
 import { siteConfig } from "@/config/site";
 import { db } from "@/lib/db";
-
-const postmarkClient = new Client(env.POSTMARK_API_TOKEN);
+import { createTransport } from "nodemailer";
 
 export const authOptions: NextAuthOptions = {
   // huh any! I know.
@@ -32,44 +31,29 @@ export const authOptions: NextAuthOptions = {
       clientSecret: env.GOOGLE_CLIENT_SECRET,
     }),
     EmailProvider({
-      from: env.SMTP_FROM,
+      from: process.env.EMAIL_FROM,
       sendVerificationRequest: async ({ identifier, url, provider }) => {
-        const user = await db.user.findUnique({
-          where: {
-            email: identifier,
-          },
-          select: {
-            emailVerified: true,
+        // create transport for SMTP
+        const transport = createTransport({
+          host: process.env.EMAIL_SERVER_HOST,
+          port: process.env.EMAIL_SERVER_PORT,
+          auth: {
+            user: process.env.EMAIL_SERVER_USER,
+            pass: process.env.EMAIL_SERVER_PASSWORD,
           },
         });
 
-        const templateId = user?.emailVerified
-          ? env.POSTMARK_SIGN_IN_TEMPLATE
-          : env.POSTMARK_ACTIVATION_TEMPLATE;
-        if (!templateId) {
-          throw new Error("Missing template id");
-        }
-
-        const result = await postmarkClient.sendEmailWithTemplate({
-          TemplateId: parseInt(templateId),
-          To: identifier,
-          From: provider.from as string,
-          TemplateModel: {
-            action_url: url,
-            product_name: siteConfig.name,
-          },
-          Headers: [
-            {
-              // Set this to prevent Gmail from threading emails.
-              // See https://stackoverflow.com/questions/23434110/force-emails-not-to-be-grouped-into-conversations/25435722.
-              Name: "X-Entity-Ref-ID",
-              Value: new Date().getTime() + "",
-            },
-          ],
+        // send verification email
+        const info = await transport.sendMail({
+          from: provider.from,
+          to: identifier,
+          subject: `Sign in to ${url}`,
+          text: `Sign in to ${url}`,
+          html: `<p>Sign in to <a href="${url}">${url}</a></p>`,
         });
 
-        if (result.ErrorCode) {
-          throw new Error(result.Message);
+        if (!info.messageId) {
+          throw new Error("Failed to send verification request email");
         }
       },
     }),

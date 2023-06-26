@@ -14,7 +14,7 @@ import {
 import { UserAvatar } from "@/components/user-avatar";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, "name" | "image" | "email">;
+  user: Pick<User, "name" | "image" | "email"> & { isAdmin?: boolean };
 }
 
 export function UserAccountNav({ user }: UserAccountNavProps) {
@@ -48,6 +48,14 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
             Settings
           </Link>
         </DropdownMenuItem>
+        {user.isAdmin && (
+          <DropdownMenuItem asChild>
+            <Link className="text-white" href="/admin">
+              Admin
+            </Link>
+          </DropdownMenuItem>
+        )}
+
         <DropdownMenuSeparator />
         <DropdownMenuItem
           className="cursor-pointer text-white"

@@ -11,7 +11,7 @@ interface PostItemProps {
 
 export function PostItem({ post }: PostItemProps) {
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="flex items-center justify-between border-white bg-[#212121] p-4">
       <div className="grid gap-1">
         <Link
           href={`/editor/${post.id}`}
@@ -20,7 +20,7 @@ export function PostItem({ post }: PostItemProps) {
           {post.title}
         </Link>
         <div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-white">
             {formatDate(post.createdAt?.toDateString())}
           </p>
         </div>

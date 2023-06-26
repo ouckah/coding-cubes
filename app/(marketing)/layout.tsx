@@ -17,6 +17,11 @@ export default async function MarketingLayout({
   children,
 }: MarketingLayoutProps) {
   const user = await getCurrentUser();
+  let isAdmin = false;
+  if (user && user.email) {
+    const administrators = ["wedabeast360@gmail.com"];
+    isAdmin = administrators.includes(user.email);
+  }
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-[#2c2c2c]">
@@ -39,6 +44,7 @@ export default async function MarketingLayout({
                 name: user.name,
                 image: user.image,
                 email: user.email,
+                isAdmin: isAdmin,
               }}
             />
           )}
